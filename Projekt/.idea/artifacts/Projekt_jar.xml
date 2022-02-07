@@ -1,0 +1,19 @@
+<component name="ArtifactManager">
+  <artifact name="Projekt:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Projekt_jar</output-path>
+    <root id="root">
+      <element id="archive" name="Projekt.jar">
+        <element id="module-output" name="Projekt" />
+      </element>
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-fxml:17.0.0.1" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-graphics:win:17.0.0.1" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-base:win:17.0.0.1" />
+      <element id="file-copy" path="$PROJECT_DIR$/../Folder/Studia/V Semestr/Bazy Danych/Lab11/postgresql-42.3.1.jar" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-base:17.0.0.1" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-controls:17.0.0.1" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-graphics:17.0.0.1" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-controls:win:17.0.0.1" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-fxml:win:17.0.0.1" />
+    </root>
+  </artifact>
+</component>

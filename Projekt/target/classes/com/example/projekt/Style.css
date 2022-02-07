@@ -1,0 +1,17 @@
+.menuItem:hover{
+    -fx-border-color: #660099;
+    -fx-border-width: 0px 0px 3px 0px;
+}
+
+.sliderMenu:hover{
+    -fx-background-color: #146886;
+    -fx-border-color: WHITE;
+    -fx-border-width: 0px 0px 0px 3px;
+}
+.menuItem1 {
+    -fx-background-color:  #CF3D3D;
+    -fx-border-color: #CF3D3D;
+    -fx-padding: 0px 95px 0px 10px;
+    -fx-font-size: 14px;
+    -fx-font-color:YELLOW;
+}

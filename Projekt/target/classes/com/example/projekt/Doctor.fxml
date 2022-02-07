@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projekt.DoctorController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="45.0" prefWidth="200.0" style="-fx-background-color: WHITE;" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane layoutX="66.0" layoutY="20.0" prefHeight="8.0" prefWidth="200.0" style="-fx-background-color: #032d4d;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <HBox layoutX="301.0" layoutY="2.0" prefHeight="43.0" prefWidth="624.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="8.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#Logout" prefHeight="38.0" prefWidth="624.0" style="-fx-background-color: WHITE;" styleClass="menuItem" text="Wyloguj">
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/login.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Label fx:id="Menu" layoutX="60.0" layoutY="15.0" onMouseClicked="#Menu" text="MENU" visible="false">
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/menu.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+                  <Label fx:id="MenuClose" layoutX="60.0" layoutY="15.0" onMouseClicked="#MenuClose" text="MENU">
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/menu.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </top>
+         <left>
+            <AnchorPane fx:id="slider" prefHeight="362.0" prefWidth="176.0" style="-fx-background-color: #0A4969;" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox layoutX="38.0" layoutY="39.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="53.0">
+                     <children>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#Profil" prefHeight="38.0" prefWidth="176.0" style="-fx-background-color: #0A4969;" styleClass="sliderMenu" text="Profil" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/profil.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <MenuButton mnemonicParsing="false" prefHeight="38.0" prefWidth="176.0" style="-fx-background-color: #0A4969;" styleClass="sliderMenu" text="Pacjenci" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/patient.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#AddPatient" styleClass="menuItem1" text="Dodaj" />
+                              <MenuItem mnemonicParsing="false" onAction="#SelectPatient" styleClass="menuItem1" text="Baza" />
+                           </items>
+                        </MenuButton>
+                        <MenuButton mnemonicParsing="false" prefHeight="38.0" prefWidth="176.0" style="-fx-background-color: #0A4969;" styleClass="sliderMenu" text="Wizyty" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/room.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#AddVisit" styleClass="menuItem1" text="Dodaj" />
+                              <MenuItem mnemonicParsing="false" onAction="#SelectVisit" styleClass="menuItem1" text="Baza" />
+                           </items>
+                        </MenuButton>
+                        <MenuButton mnemonicParsing="false" prefHeight="38.0" prefWidth="176.0" style="-fx-background-color: #0A4969;" styleClass="sliderMenu" text="Recepty" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/recipt.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#SelectPrescription" styleClass="menuItem1" text="Baza" />
+                           </items>
+                        </MenuButton>
+                        <MenuButton mnemonicParsing="false" prefHeight="38.0" prefWidth="176.0" style="-fx-background-color: #0A4969;" styleClass="sliderMenu" text="Operacje" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/surge.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#AddOperation" styleClass="menuItem1" text="Dodaj" />
+                              <MenuItem mnemonicParsing="false" onAction="#SelectOperation" styleClass="menuItem1" text="Baza" />
+                           </items>
+                        </MenuButton>
+                        <MenuButton mnemonicParsing="false" prefHeight="38.0" prefWidth="176.0" style="-fx-background-color: #0A4969;" styleClass="sliderMenu" text="Obecnosc" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/attend.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#AddPresence" styleClass="menuItem1" text="Dodaj" />
+                              <MenuItem mnemonicParsing="false" onAction="#SelectPresence" styleClass="menuItem1" text="Historia" />
+                           </items>
+                        </MenuButton>
+                        <MenuButton mnemonicParsing="false" prefHeight="38.0" prefWidth="176.0" style="-fx-background-color: #0A4969;" styleClass="sliderMenu" text="Oddział" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/department.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#AddDepartment" styleClass="menuItem1" text="Dodaj" />
+                              <MenuItem mnemonicParsing="false" onAction="#SelectDepartment" styleClass="menuItem1" text="Baza" />
+                           </items>
+                        </MenuButton>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane fx:id="profil" prefHeight="554.0" prefWidth="624.0" visible="false">
+                     <children>
+                        <Label layoutX="289.0" layoutY="14.0" text="Profil" AnchorPane.leftAnchor="289.0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="206.0" fitWidth="134.0" layoutX="41.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/doktor.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="profil_fname" layoutX="275.0" layoutY="111.0" text="Imie: " />
+                        <Label fx:id="profil_lname" layoutX="275.0" layoutY="139.0" text="Nazwisko: " />
+                        <Label fx:id="profil_pesel" layoutX="275.0" layoutY="170.0" text="Pesel: " />
+                        <Label fx:id="profil_specialization" layoutX="276.0" layoutY="199.0" text="Specjalizacja: " />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="add_patient" prefHeight="554.0" prefWidth="624.0" visible="false">
+                     <children>
+                        <Label layoutX="246.0" layoutY="14.0" text="Dodaj pacjenta" AnchorPane.leftAnchor="246.0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <GridPane layoutX="133.0" layoutY="84.0" prefHeight="210.0" prefWidth="358.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="173.4000244140625" minWidth="10.0" prefWidth="75.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="284.5999755859375" minWidth="10.0" prefWidth="283.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Pesel" />
+                              <Label text="Imie" GridPane.rowIndex="1" />
+                              <Label text="Nazwisko" GridPane.rowIndex="2" />
+                              <Label text="Schorzenie" GridPane.rowIndex="3" />
+                              <Label text="Oddzial" GridPane.rowIndex="4" />
+                              <Label text="Pokój" GridPane.rowIndex="5" />
+                              <TextField fx:id="add_patient_pesel" GridPane.columnIndex="1" />
+                              <TextField fx:id="add_patient_fname" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="add_patient_lname" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField fx:id="add_patient_room" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <ComboBox fx:id="add_patient_department" prefHeight="26.0" prefWidth="284.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <TextField fx:id="add_patient_disease" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label text="Telefon" GridPane.rowIndex="6" />
+                              <TextField fx:id="add_patient_phone" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                           </children>
+                        </GridPane>
+                        <Button layoutX="288.0" layoutY="359.0" mnemonicParsing="false" onAction="#clickAddPatient" text="Dodaj" />
+                        <Label fx:id="add_patient_label" layoutX="290.0" layoutY="325.0" text="Dodano" visible="false" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="select" prefHeight="554.0" prefWidth="624.0" visible="false">
+                     <children>
+                        <Label layoutX="287.0" layoutY="6.0" text="Baza" AnchorPane.leftAnchor="287.0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="215.0" layoutY="219.0" text="Dodatkowe opcje" />
+                        <Button layoutX="526.0" layoutY="472.0" mnemonicParsing="false" onAction="#clickSelect" text="Wykonaj" />
+                        <TableView fx:id="table" layoutX="14.0" layoutY="46.0" prefHeight="358.0" prefWidth="596.0" />
+                        <Label layoutX="25.0" layoutY="428.0" text="Znajdz po" />
+                        <TextField fx:id="find" layoutX="331.0" layoutY="424.0" prefHeight="26.0" prefWidth="174.0" />
+                        <ComboBox fx:id="find_option" layoutX="118.0" layoutY="424.0" prefHeight="26.0" prefWidth="195.0" />
+                        <Label layoutX="24.0" layoutY="476.0" text="Inne opcje" />
+                        <ComboBox fx:id="select_option" layoutX="118.0" layoutY="471.0" prefHeight="26.0" prefWidth="386.0" />
+                        <Button layoutX="526.0" layoutY="424.0" mnemonicParsing="false" onAction="#clickFind" text="Wykonaj" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="add_visit" prefHeight="554.0" prefWidth="624.0" visible="false">
+                     <children>
+                        <Label layoutX="262.0" layoutY="14.0" text="Wizyta" AnchorPane.leftAnchor="262.0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <GridPane layoutX="27.0" layoutY="72.0" prefHeight="148.0" prefWidth="246.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label text="Pesel pacjenta" />
+                              <Label text="Data" GridPane.rowIndex="1" />
+                              <Label text="Opis" GridPane.rowIndex="2" />
+                              <Label text="Koszt" GridPane.rowIndex="3" />
+                              <TextField fx:id="add_visit_pesel_p" GridPane.columnIndex="1" />
+                              <TextField fx:id="add_visit_money" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <DatePicker fx:id="add_visit_date" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="add_visit_description" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                           </children>
+                        </GridPane>
+                        <Button layoutX="113.0" layoutY="264.0" mnemonicParsing="false" onAction="#clickAddVisit" text="Dodaj" />
+                        <GridPane layoutX="382.0" layoutY="204.0" prefHeight="94.0" prefWidth="219.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Opis stosowania" GridPane.rowIndex="1" />
+                              <Label text="Lekarstwo" GridPane.rowIndex="2" />
+                              <TextField fx:id="add_prescription_description" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="add_prescription_drug" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label text="Pesel pacjenta" />
+                              <TextField fx:id="add_prescription_pesel_p" GridPane.columnIndex="1" />
+                           </children>
+                        </GridPane>
+                        <Label layoutX="450.0" layoutY="168.0" text="Wystaw recepte" />
+                        <Button layoutX="468.0" layoutY="331.0" mnemonicParsing="false" onAction="#clickAddPrescription" text="Dodaj" />
+                        <Label fx:id="add_visit_label" layoutX="115.0" layoutY="233.0" text="Dodano" visible="false" />
+                        <Label fx:id="add_prescription_label" layoutX="470.0" layoutY="306.0" text="Dodano" visible="false" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="add_operation" prefHeight="554.0" prefWidth="624.0" visible="false">
+                     <children>
+                        <Label layoutX="244.0" layoutY="14.0" text="Dodaj operacje" AnchorPane.leftAnchor="244.0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <GridPane layoutX="84.0" layoutY="82.0" prefHeight="272.0" prefWidth="453.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label text="Nazwa" />
+                              <Label text="Pesel pacjenta" GridPane.rowIndex="1" />
+                              <Label text="Numer sali" GridPane.rowIndex="2" />
+                              <Label text="Data" GridPane.rowIndex="3" />
+                              <TextField fx:id="add_operation_name" GridPane.columnIndex="1" />
+                              <TextField fx:id="add_operation_pesel_p" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="add_operation_room" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <DatePicker fx:id="add_operation_date" prefHeight="26.0" prefWidth="229.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <TextField fx:id="add_operation_pesel_n" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Label text="Pesel pielegniarki" GridPane.rowIndex="4" />
+                           </children>
+                        </GridPane>
+                        <Button layoutX="287.0" layoutY="401.0" mnemonicParsing="false" onAction="#clickAddOperation" text="Dodaj" />
+                        <Label fx:id="add_operation_label" layoutX="258.0" layoutY="373.0" text="Dodano" visible="false" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="add_presence" prefHeight="554.0" prefWidth="624.0" visible="false">
+                     <children>
+                        <Label layoutX="241.0" layoutY="14.0" text="Dodaj obecnosc" AnchorPane.leftAnchor="241.0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <GridPane layoutX="44.0" layoutY="80.0" prefHeight="186.0" prefWidth="536.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label text="Status" />
+                              <Label text="Godzina dyżur" GridPane.rowIndex="1" />
+                              <Label text="Data" GridPane.rowIndex="2" />
+                              <TextField fx:id="add_presence_status" GridPane.columnIndex="1" />
+                              <TextField fx:id="add_presence_hour" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <DatePicker fx:id="add_presence_date" prefHeight="26.0" prefWidth="270.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                           </children>
+                        </GridPane>
+                        <Button layoutX="288.0" layoutY="328.0" mnemonicParsing="false" onAction="#clickAddPresence" text="Dodaj" />
+                        <Label fx:id="add_presence_label" layoutX="290.0" layoutY="298.0" text="Dodano" visible="false" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="add_department" prefHeight="554.0" prefWidth="624.0" visible="false">
+                     <children>
+                        <Label layoutX="253.0" layoutY="14.0" text="Załóż oddział" AnchorPane.leftAnchor="253.0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <GridPane layoutX="44.0" layoutY="80.0" prefHeight="186.0" prefWidth="536.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label text="Nazwa" />
+                              <Label text="Wielkośc personelu" GridPane.rowIndex="1" />
+                              <TextField fx:id="add_department_name" GridPane.columnIndex="1" />
+                              <TextField fx:id="add_department_personel" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                           </children>
+                        </GridPane>
+                        <Button layoutX="288.0" layoutY="328.0" mnemonicParsing="false" onAction="#clickAddDepartment" text="Dodaj" />
+                        <Label fx:id="add_presence_label1" layoutX="290.0" layoutY="298.0" text="Dodano" visible="false" />
+                        <Label fx:id="add_department_label" layoutX="290.0" layoutY="298.0" text="Dodano" visible="false" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Main-Class: com.example.projekt.Launcher
+Class-Path: javafx-fxml-17.0.0.1.jar javafx-graphics-17.0.0.1-win.jar ja
+ vafx-base-17.0.0.1-win.jar postgresql-42.3.1.jar javafx-base-17.0.0.1.j
+ ar javafx-controls-17.0.0.1.jar javafx-graphics-17.0.0.1.jar javafx-con
+ trols-17.0.0.1-win.jar javafx-fxml-17.0.0.1-win.jar
+

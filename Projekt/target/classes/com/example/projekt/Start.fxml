@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projekt.StartController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="45.0" prefWidth="200.0" style="-fx-background-color: WHITE;" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane layoutX="66.0" layoutY="20.0" prefHeight="8.0" prefWidth="200.0" style="-fx-background-color: #032d4d;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <HBox layoutX="301.0" layoutY="2.0" prefHeight="43.0" prefWidth="624.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="8.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#switchToStart" prefHeight="38.0" prefWidth="156.0" style="-fx-background-color: WHITE;" styleClass="menuItem" text="Strona Główna">
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/home.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#switchToLogin" prefHeight="38.0" prefWidth="156.0" style="-fx-background-color: WHITE;" styleClass="menuItem" text="Zaloguj">
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/login.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#switchToRegister" prefHeight="38.0" prefWidth="156.0" style="-fx-background-color: WHITE;" styleClass="menuItem" text="Zarejestruj">
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/register.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#switchToHelp" prefHeight="38.0" prefWidth="156.0" style="-fx-background-color: WHITE;" styleClass="menuItem" text="Pomoc">
+                           <HBox.margin>
+                              <Insets right="2.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/help.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Label fx:id="Menu" layoutX="60.0" layoutY="15.0" onMouseClicked="#Menu" text="MENU" visible="false">
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/menu.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+                  <Label fx:id="MenuClose" layoutX="60.0" layoutY="15.0" onMouseClicked="#MenuClose" text="MENU">
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/menu.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </top>
+         <left>
+            <AnchorPane fx:id="slider" prefHeight="362.0" prefWidth="176.0" style="-fx-background-color: #0A4969;" BorderPane.alignment="CENTER" />
+         </left>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane fx:id="register" prefHeight="554.0" prefWidth="624.0" visible="false">
+                     <children>
+                        <Label layoutX="279.0" layoutY="14.0" text="Rejestracja" AnchorPane.leftAnchor="279.0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <GridPane layoutX="64.0" layoutY="77.0" prefWidth="524.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="294.4000244140625" minWidth="10.0" prefWidth="113.99998779296875" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="489.5999755859375" minWidth="10.0" prefWidth="410.80001220703133" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label text="Pesel">
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label text="Haslo" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label text="Imie" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label text="Nazwisko" GridPane.rowIndex="3">
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label text="Mail" GridPane.rowIndex="4">
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                              </Label>
+                              <TextField fx:id="pesel" prefHeight="26.0" prefWidth="350.0" promptText="Pesel" GridPane.columnIndex="1">
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="fname" promptText="Imie" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="lname" promptText="Nazwisko" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="mail" promptText="Mail" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                              </TextField>
+                              <PasswordField fx:id="password" promptText="Haslo" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                              </PasswordField>
+                              <Label text="Telefon" GridPane.rowIndex="5">
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                              </Label>
+                              <TextField fx:id="phone" promptText="Telefon" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                           </children>
+                        </GridPane>
+                        <Label fx:id="department_label" layoutX="272.0" layoutY="285.0" text="Oddzial/Liczba/Etaty" />
+                        <RadioButton layoutX="67.0" layoutY="351.0" mnemonicParsing="false" onAction="#DoctorClick" text="Lekarz">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="pro" />
+                           </toggleGroup></RadioButton>
+                        <RadioButton layoutX="67.0" layoutY="313.0" mnemonicParsing="false" onAction="#NurseClick" selected="true" text="Personel" toggleGroup="$pro" />
+                        <ComboBox fx:id="department" layoutX="261.0" layoutY="309.0" prefWidth="130.0" />
+                        <Button layoutX="290.0" layoutY="443.0" mnemonicParsing="false" onAction="#Register" text="Zarejestruj" />
+                        <Label fx:id="register_label" layoutX="271.0" layoutY="411.0" text="Zarejestrowano" visible="false" />
+                        <TextField fx:id="specialization" layoutX="450.0" layoutY="308.0" prefHeight="26.0" prefWidth="118.0" />
+                        <Label fx:id="specialization_label" layoutX="476.0" layoutY="285.0" text="Specjalizacja" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="help" prefHeight="554.0" prefWidth="624.0" visible="false">
+                     <children>
+                        <Label layoutX="281.0" layoutY="20.0" text="Pomoc" AnchorPane.leftAnchor="281.0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="90.0" layoutY="110.0" prefHeight="305.0" prefWidth="443.0" text="Jest to Baza Danych Szpiatala do którego uzytkowanik może sie zarejestrowac jak Lekarz baz pielegniarka/pielegniarz" wrapText="true" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="login" prefHeight="554.0" prefWidth="624.0" visible="false">
+                     <children>
+                        <Label layoutX="264.0" layoutY="42.0" text="Logowanie" AnchorPane.leftAnchor="264.0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <GridPane layoutX="43.0" layoutY="134.0" prefHeight="70.0" prefWidth="538.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="294.4000244140625" minWidth="10.0" prefWidth="110.4000244140625" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="489.5999755859375" minWidth="10.0" prefWidth="489.5999755859375" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label text="Pesel">
+                                 <GridPane.margin>
+                                    <Insets left="30.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label text="Haslo" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets left="30.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <TextField fx:id="login_pesel" prefHeight="26.0" prefWidth="350.0" promptText="Pesel" GridPane.columnIndex="1">
+                                 <GridPane.margin>
+                                    <Insets right="30.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <PasswordField fx:id="login_password" promptText="Haslo" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets right="30.0" />
+                                 </GridPane.margin>
+                              </PasswordField>
+                           </children>
+                        </GridPane>
+                        <Button layoutX="284.0" layoutY="296.0" mnemonicParsing="false" onAction="#Login" text="Zaloguj" />
+                        <Label fx:id="login_label" layoutX="198.0" layoutY="265.0" text="Nie udało sie zalogować" visible="false" />
+                        <RadioButton layoutX="146.0" layoutY="213.0" mnemonicParsing="false" onAction="#set_acces1" prefHeight="47.0" prefWidth="102.0" text="Lekarz">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="pro_login" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton layoutX="409.0" layoutY="216.0" mnemonicParsing="false" onAction="#set_acces2" prefHeight="42.0" prefWidth="118.0" text="Personel" toggleGroup="$pro_login" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="start" prefHeight="554.0" prefWidth="624.0" visible="false">
+                     <children>
+                        <ImageView fitHeight="570.0" fitWidth="545.0" layoutX="40.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/start.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
